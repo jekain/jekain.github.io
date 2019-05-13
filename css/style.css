@@ -26,7 +26,10 @@ body{
 h1, h2, h3, h4, h5, h6{
 	margin: 0;
 }
-
+/* page */
+.page{
+	overflow: hidden;
+}
 /* container */
 
 .container {
@@ -1018,7 +1021,7 @@ h1, h2, h3, h4, h5, h6{
 	margin-right: 15px;
 }
 .blog_footer_logo{
-	font-style: 14px;
+	font-size: 14px;
 	color: #333;
 	text-transform: uppercase;
 	margin-bottom: 40px;
