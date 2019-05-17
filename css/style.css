@@ -50,9 +50,9 @@ h1, h2, h3, h4, h5, h6{
 	background-size: cover;
 	min-height: 900px;
 	position: relative;
-
-
 }
+
+
 
 /* header_intro */
 
@@ -63,6 +63,18 @@ h1, h2, h3, h4, h5, h6{
 	-ms-align-items:center;
 	align-items:center;
 
+}
+.intro--fixed{
+	padding: 10px 0;
+	background-color: #eb8b8d;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+
+	transform: translate3d(0, 0, 0,);
 }
 .logo{
 	font-size: 30px;
@@ -85,6 +97,62 @@ h1, h2, h3, h4, h5, h6{
 	color: #fce38a;
 	border-bottom: 3px solid #fce38a;
 }
+
+/*nav_toggle*/
+
+.nav_toggle{
+	width: 30px;
+	padding: 10px 0;
+	display: none;
+	
+	font-size: 0;
+	border: 0;
+	color: transparent;
+	background: none;
+	cursor: pointer;
+
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 1;
+}
+
+.nav_toggle_item{
+	display: block;
+	width: 100%;
+	height: 3px;
+
+	background-color: #fff;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.nav_toggle_item:before,
+.nav_toggle_item:after{
+	content: "";
+	width: 100%;
+	height: 3px;
+
+	background-color: #fff;
+
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+.nav_toggle_item:before{
+	top: -8px;
+}
+
+.nav_toggle_item:after{
+	bottom: -8px;
+}
+
 
 /* intro_title */
 
@@ -1282,17 +1350,27 @@ h1, h2, h3, h4, h5, h6{
 
 @media screen and (max-width: 820px){
 	/* header_intro */
-	.logo{
 
+	.header_intro{
+		padding-top: 10px;
 	}
-	.nav a{
-		font-size: 11px;
-		margin-right: 15px;
+
+	.logo{
+		font-size: 24px;
 	}
 	.container {
 		width: 85%;
 		max-width: 770px;
 
+	}
+
+	.nav a{
+		display: none;
+	}
+	
+	/*nav_toggle*/
+	.nav_toggle{
+		display: block;
 	}
 		
 
@@ -1572,9 +1650,14 @@ h1, h2, h3, h4, h5, h6{
 
 @media screen and (max-width: 575px){
 	/* header_intro */
-	.nav a{
-		display: none;
+
+	
+	.logo{
+	font-size: 24px;
+	padding-left: 10px;
 	}
+
+	
 
 	/* intro */
 
@@ -1585,7 +1668,6 @@ h1, h2, h3, h4, h5, h6{
 	}
 	.container {
 		width: 90%;
-		max-width: 470px;
 	}
 	/* intro_title */
 
