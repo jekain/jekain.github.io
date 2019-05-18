@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5, h6{
 	padding-top: 25px;
 	-ms-align-items:center;
 	align-items:center;
+	position: relative;
 
 }
 .intro--fixed{
@@ -76,6 +77,11 @@ h1, h2, h3, h4, h5, h6{
 
 	transform: translate3d(0, 0, 0,);
 }
+
+.header_intro.active{
+	background-color: #eb8b8d;
+}
+
 .logo{
 	font-size: 30px;
 	font-weight: 700;
@@ -122,7 +128,7 @@ h1, h2, h3, h4, h5, h6{
 	width: 100%;
 	height: 3px;
 
-	background-color: #fff;
+	background: #fff;
 
 	position: absolute;
 	top: 0;
@@ -130,6 +136,12 @@ h1, h2, h3, h4, h5, h6{
 	bottom: 0;
 	left: 0;
 	margin: auto;
+
+	transition: background .3s linear;
+}
+
+.nav_toggle.active .nav_toggle_item{
+	background: none;
 }
 
 .nav_toggle_item:before,
@@ -143,6 +155,21 @@ h1, h2, h3, h4, h5, h6{
 	position: absolute;
 	left: 0;
 	z-index: 1;
+
+	transition: transform .2s linear; 
+}
+
+
+.nav_toggle.active .nav_toggle_item:before{
+	transform-origin: left top;
+	transform: rotate(45deg)
+	translateX(-3px);
+}
+
+.nav_toggle.active .nav_toggle_item:after{
+	transform-origin: left bottom;
+	transform: rotate(-45deg)
+	translateX(-3px);
 }
 
 .nav_toggle_item:before{
@@ -315,6 +342,7 @@ h1, h2, h3, h4, h5, h6{
 .about_items{
 	box-sizing: border-box;
 	width: 30%;
+	max-width: 380px;
 	background: #95e1d3;
 	position: relative;
 }
@@ -617,6 +645,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .team_it_foto{
+	max-width: 380px;
 	
 	background: #95e1d3;
 }
@@ -1204,7 +1233,8 @@ h1, h2, h3, h4, h5, h6{
 	/* intro_title */
 
 	.container{
-		width: 90%;
+		padding: 0;
+		margin: 0;
 	}
 
 	.intro_title {
@@ -1352,20 +1382,34 @@ h1, h2, h3, h4, h5, h6{
 	/* header_intro */
 
 	.header_intro{
-		padding-top: 10px;
+		padding: 10px 0;
 	}
 
 	.logo{
 		font-size: 24px;
 	}
 	.container {
-		width: 85%;
-		max-width: 770px;
+	}
 
+	.nav {
+		display: none;
+
+		text-align: left;
+		
+		
+		
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+
+		background-color: #eb8b8d;
 	}
 
 	.nav a{
-		display: none;
+		width: 100%;
+		display: block;
+		padding: 8px 20px;
 	}
 	
 	/*nav_toggle*/
@@ -1665,9 +1709,6 @@ h1, h2, h3, h4, h5, h6{
 		min-height: 650px;
 
 
-	}
-	.container {
-		width: 90%;
 	}
 	/* intro_title */
 
