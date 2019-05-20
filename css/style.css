@@ -104,6 +104,15 @@ h1, h2, h3, h4, h5, h6{
 	border-bottom: 3px solid #fce38a;
 }
 
+.nav_link.active{
+	color: #fce38a;
+	border-bottom: 3px solid #fce38a;
+}
+
+.nav.active{
+	display: block;
+}
+
 /*nav_toggle*/
 
 .nav_toggle{
@@ -121,6 +130,10 @@ h1, h2, h3, h4, h5, h6{
 	top: 15px;
 	right: 15px;
 	z-index: 1;
+}
+
+.nav_toggle:focus{
+	outline: 0;
 }
 
 .nav_toggle_item{
