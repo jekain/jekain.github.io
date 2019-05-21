@@ -51,5 +51,21 @@ $(function(){
 		$(this).toggleClass("active");
 		$("#nav").toggleClass("active");
 
-	})
+	});
+
+
+	//accordion
+
+	$("[data-collapse]").on("click", function(event){
+		event.preventDefault();
+
+		var $this = $(this),
+			blockId = $this.data('collapse');
+
+		$this.toggleClass("wedo_it_info--active");
+		//$(blockId).slideToggle();
+
+
+	});
+
 })
