@@ -3,6 +3,7 @@ $(function(){
 
 	var introH = $("#intro").innerHeight(),
 		header = $("#header"),
+		headerH = $("#header").innerHeight(),
 		scrollOffset = $(window).scrollTop();
 
 	checkScroll(scrollOffset);
@@ -17,7 +18,7 @@ $(function(){
 
 	function checkScroll(scrollOffset) {
 		
-		if (scrollOffset >= introH) {
+		if (scrollOffset >= introH ) {
 			header.addClass("intro--fixed");
 		} else{
 			header.removeClass("intro--fixed");
@@ -38,7 +39,7 @@ $(function(){
 		$this.addClass("active");
 
 		$("html, body").animate({
-			scrollTop: blockOffset
+			scrollTop: blockOffset - headerH
 		}, 500);
 
 	});
@@ -68,4 +69,14 @@ $(function(){
 
 	});
 
-})
+
+	//slider
+
+	$("[data-slider]").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+
+	});
+
+});
