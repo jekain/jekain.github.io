@@ -288,6 +288,8 @@ nav a:hover{
 
 .slider_btn{
 	font-size: 14px;
+	max-height: 50px;
+	margin-left: 70px;
 	font-weight: 500;
 	padding: 15px 50px 15px 25px;
 	box-shadow: 0 1px 1px #eaeaea;
@@ -393,6 +395,7 @@ nav a:hover{
 }
 
 .slider_item{
+	text-align: center;
 	width: 20%;
 	padding-bottom: 25px;
 	margin: 10px;
@@ -404,6 +407,7 @@ nav a:hover{
 .slider_item img{
 	box-sizing: border-box;
 	max-width: 100%;
+	margin: 0 auto;
 }
 
 .slider_item:hover{
@@ -768,6 +772,18 @@ nav a:hover{
 		max-width: 90%;
 	}
 
+	/*advant*/
+	.advant_item{
+		width: 95%;
+		margin: 10px auto;
+		padding-right: 0;	
+	}
+
+	.advant_text_container{
+		width: 90%;
+		left: 10px;
+	}
+
 	/*intro_container*/
 
 	.intro_container{
@@ -796,7 +812,7 @@ nav a:hover{
 	}
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 670px){
 
 	.container{
 		max-width: 100%;
@@ -838,7 +854,8 @@ nav a:hover{
 	}
 
 	.slider_name h1{
-		width: 250px;
+		width: 100%;
+		min-width: 320px;
 	}
 
 	.slider_btn{
